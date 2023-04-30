@@ -13,13 +13,14 @@
     --fs-header:1.5rem;
     --fw-header:700;
     --fw-header-nav:500;
-    --fs-hero-content-header:5.5rem;
+    --fs-hero-content-header:3.5rem;
     --fw-hero-content-header:700;
     --fs-hero-content-body:1rem;
     --fw-hero-content-body:400;
     --fs-hero-content-bnt:1.2rem;
     --fw-hero-content-bnt:500;
     --fs-icon:2rem;
+  
 }.dark-theme{
         /* colors  */
         --primaryColor:#3d4843;
@@ -31,11 +32,11 @@
         --secondaryFont:"Permanent Marker";
         --mainTxtColor:#fff;
         --bntTxtColor:#fff;
-        --bntHoverTxtColor:#000;
+        --bntHoverTxtColor:#3d4843;
         --fs-header:1.5rem;
         --fw-header:700;
         --fw-header-nav:500;
-        --fs-hero-content-header:5.5rem;
+        --fs-hero-content-header:3.5rem;
         --fw-hero-content-header:700;
         --fs-hero-content-body:1rem;
         --fw-hero-content-body:400;
@@ -43,6 +44,7 @@
         --fw-hero-content-bnt:500;
         --fs-icon:2rem;
 }
+
 *{
   margin: 0;
   padding: 0;
@@ -138,7 +140,7 @@ body{
 /* hero section  */
 .hero-section{
   height: calc(100vh - 160px);
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -197,6 +199,7 @@ body{
 }
 .hero-image img{
   height: 100%;
+  float:left;
   opacity: 0;
   animation: hero-img 2s ease forwards;
 }
@@ -239,7 +242,7 @@ body{
   --fs-icon:2rem;
   }.dark-theme{
       /* colors  */
-      --primaryColor:#000;
+      --primaryColor:#3d4843;
       --secondaryColor:#fff;
       --navBorderColor:#fff;
   
@@ -248,7 +251,7 @@ body{
       --secondaryFont:"Permanent Marker";
       --mainTxtColor:#fff;
       --bntTxtColor:#fff;
-      --bntHoverTxtColor:#000;
+      --bntHoverTxtColor:#3d4843;
       --fs-header:1.5rem;
       --fw-header:700;
       --fw-header-nav:500;
@@ -373,4 +376,8 @@ body{
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+.content-header p{
+  display: inline-block;
 }
