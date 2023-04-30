@@ -1,58 +1,33 @@
-const tabs = document.querySelectorAll('.header-nav-tab');
-const highlight = document.querySelector('.highlight');
-const mobileNavBarIcon = document.getElementById("mobile-nav-bar-icon");
-const headerNavList = document.getElementById("header-nav-list");
-const firstTab = tabs[0];
-var icon =document.getElementById("mode-change");
+const  themeChangeIcon = document.getElementById("themeChangeIcon");
+const  mobileNavIcon = document.getElementById("mobileNavIcon");
+const headerNavList = document.getElementById("headerNavList");
+const heroSection = document.getElementById("heroSection");
+ 
 
-// Calculate the position of the highlight element
-const left = firstTab.offsetLeft;
-const width = firstTab.offsetWidth;
-
-// Set the default position of the highlight element
-highlight.style.left = `${left}px`;
-highlight.style.width = `${width}px`;
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', function() {
-    // Get the index of the selected tab
-    const index = this.dataset.index;
-    
-    // Calculate the position of the highlight element
-    const left = this.offsetLeft;
-    const width = this.offsetWidth;
-    
-    // Update the position of the highlight element
-    highlight.style.left = `${left}px`;
-    highlight.style.width = `${width}px`;
-    
-    // Add active class to the selected tab
-    tabs.forEach(tab => tab.classList.remove('active'));
-    this.classList.add('active');
-  });
+//theme change 
+themeChangeIcon.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
+      themeChangeIcon.classList.remove('fa-moon');
+      themeChangeIcon.classList.add('fa-sun');
+    } else {
+      themeChangeIcon.classList.remove('fa-sun');
+      themeChangeIcon.classList.add('fa-moon');
+    }
 });
 
-
-
-
-icon.onclick = function(){
-    document.body.classList.toggle("dark-theme");
-    if(icon.className=="fa-solid fa-moon"){
-        icon.className="fa-solid fa-sun"; 
+// mobile navigation 
+mobileNavIcon.onclick = function(){
+    if(mobileNavIcon.className=="fa-solid fa-bars"){
+        mobileNavIcon.className="fa-solid fa-close";
+        headerNavList.style.display = "flex";
+        headerNavList.style.transform = "translateX(10px)";
+        heroSection.style.transition = "all 0.5s ease";
+        heroSection.style.filter = "blur(5px)";
     }else{
-        icon.className="fa-solid fa-moon"; 
+        mobileNavIcon.className="fa-solid fa-bars";
+        headerNavList.style.display = "none";
+        headerNavList.style.transform = "translateX(200%)";
+        heroSection.style.filter = "blur(0)";
     }
-}
-
-mobileNavBarIcon.onclick = function() {
-  if(mobileNavBarIcon.className=="fa-solid fa-bars"){
-    mobileNavBarIcon.className="fa-solid fa-close";
-    headerNavList.style.display = "flex";
-    headerNavList.style.transform = "translateX(0)";
-  }else{
-    headerNavList.style.display = "none";
-    mobileNavBarIcon.className="fa-solid fa-bars";
-    headerNavList.style.transform = "translateX(200%)";
-  }
-
 }
