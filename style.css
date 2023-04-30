@@ -377,7 +377,3 @@ body{
       transform: translateY(0);
   }
 }
-
-.content-header p{
-  display: inline-block;
-}
