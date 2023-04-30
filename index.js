@@ -8,9 +8,11 @@ var icon =document.getElementById("mode-change");
 // Calculate the position of the highlight element
 const left = firstTab.offsetLeft;
 const width = firstTab.offsetWidth;
+
 // Set the default position of the highlight element
 highlight.style.left = `${left}px`;
 highlight.style.width = `${width}px`;
+
 tabs.forEach(tab => {
   tab.addEventListener('click', function() {
     // Get the index of the selected tab
@@ -29,6 +31,10 @@ tabs.forEach(tab => {
     this.classList.add('active');
   });
 });
+
+
+
+
 icon.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(icon.className=="fa-solid fa-moon"){
@@ -41,8 +47,10 @@ icon.onclick = function(){
 mobileNavBarIcon.onclick = function() {
   if(mobileNavBarIcon.className=="fa-solid fa-bars"){
     mobileNavBarIcon.className="fa-solid fa-close";
+    headerNavList.style.display = "flex";
     headerNavList.style.transform = "translateX(0)";
   }else{
+    headerNavList.style.display = "none";
     mobileNavBarIcon.className="fa-solid fa-bars";
     headerNavList.style.transform = "translateX(200%)";
   }
