@@ -48,7 +48,7 @@
             <!-- hero content  -->
             <div class="hero-content" >
                 <p class="content-header">
-                    Hi, I'm <span>Franz &#128075;</span><br>Front-end <span>Developer.</span>
+                    Hi, I'm <span>Franz &#128075;</span><br><span class="input"></span>
                 </p>
                 <p class="content-body">Junior Web Developer with less than a year of experience is seeking an opportunity to extend my web development and multimedia editing skills and knowledge.</p>
                 <div class="hero-btn">
@@ -71,6 +71,18 @@
     </div>
 
     <!-- custom js file  -->
-    <script src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".input",{ 
+        
+            strings:["Front-end Developer.","UI  |  Designer.","Photographer."],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop:true
+        });
+
+    </script>
 </body>
 </html>
