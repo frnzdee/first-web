@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio.</title>
+    <title>Franz Dee</title>
     <!-- font awesome cdn  -->
     <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="shortcut icon.png">
 
     <!-- custom css  -->
     <link rel="stylesheet" href="style.css">
@@ -15,63 +18,59 @@
     <!-- home page  -->
     <div class="home-page">
         <!-- header section  -->
-        <div class="header-section">
-            <!-- header logo  -->
+        <section class="header-section">
+            <!-- header logo -->
             <div class="header-logo">
-                <h1>Portfolio.</h1>
+                <p>Portfo<span>lio.</span></p>
             </div>
-
-            <!-- header navigation  -->
             <div class="header-nav">
-                <div class="mobile-nav-bar">
-                    <i class="fa-solid fa-bars" id="mobile-nav-bar-icon"></i>
+                <!-- mobile navigation icon  -->
+                <div class="mobile-nav-icon">
+                    <i class="fa-solid fa-bars" id="mobileNavIcon"></i>
                 </div>
-                <ul class="header-nav-list" id="header-nav-list">
-                    <li class="header-nav-tab ">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="header-nav-tab">
-                        <a href="#">Projects</a>
-                    </li>
-                    <li class="header-nav-tab">
-                        <a href="#">About</a>
-                    </li>
-                    <li class="header-nav-tab">
-                        <a href="#" >Contact</a>
-                    </li >
-                    <span class="highlight"></span>
+                <!-- header navigation list -->
+                <ul class="header-nav-list" id="headerNavList">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-                <div class="mode-change">
-                    <i class="fa-solid fa-moon" id="mode-change"></i>
+                <!-- theme change icon  -->
+                <div class="theme-change">
+                    <i class="fa-solid fa-moon" id="themeChangeIcon"></i>
                 </div>
             </div>
-        </div>
+        </section>
+
         <!-- hero section  -->
-        <div class="hero-section">
-            <!-- hero content section  -->
-            <div class="hero-content">
-                <div class="content-header">
-                    <h1>Hi, I'm Franz</h1>
-                    <h1><span>Front-end Developer</span></h1>
-                    <p>Junior Web Developer with less than a year of experience is seeking an opportunity to extend my web development and multimedia editing skills and knowleadge.</p>
-                </div>
-                <div class="content-btn">
+        <section class="hero-section" id="heroSection">
+            <!-- hero content  -->
+            <div class="hero-content" >
+                <p class="content-header">
+                    Hi, I'm <span>Franz &#128075;</span><br>Front-end <span>Developer.</span>
+                </p>
+                <p class="content-body">Junior Web Developer with less than a year of experience is seeking an opportunity to extend my web development and multimedia editing skills and knowledge.</p>
+                <div class="hero-btn">
                     <button class="resume-btn">Resume</button>
                 </div>
             </div>
+
             <!-- hero image  -->
             <div class="hero-image">
-                <img src="png html white line1 .png" alt="">
+                <img src="png html white line1 .png" alt="" class="main-img">
             </div>
-            <!-- social icon list  -->
+            <!-- social icons list  -->
             <div class="social-icon-list">
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-twitter"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-square-behance"></i>
+                <a href="https://www.facebook.com/franzdee03" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/iamfranzdee/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://gitlab.com/-/profile" target="_blank"><i class="fa-brands fa-square-gitlab"></i></a>
             </div>
-        </div>
+        </section>
     </div>
+
+    <!-- custom js file  -->
     <script src="index.js"></script>
 </body>
 </html>
