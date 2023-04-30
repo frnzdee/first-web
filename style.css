@@ -140,7 +140,7 @@ body{
 /* hero section  */
 .hero-section{
   height: calc(100vh - 160px);
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -162,6 +162,7 @@ body{
 }
 .content-header p{
   animation-delay: 1s ;
+  font-size: 12px;
 }
 .hero-content h1{
   font-size: var(--fs-hero-content-header);
@@ -304,7 +305,7 @@ body{
       width: 100%;
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: -35px;
       z-index: -1;
       
   }
