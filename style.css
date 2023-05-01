@@ -285,6 +285,11 @@ body{
     background-color: var(--secondaryColor);
 }
 
+.hero-content .content-header .emoji {
+    animation: waving-hand 2.5s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
 
 /* responsive design  */
 @media (max-width:768px) {
@@ -457,12 +462,6 @@ body{
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-.hero-content .content-header .emoji {
-    animation: waving-hand 2.5s infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
 }
 
 @keyframes waving-hand{
